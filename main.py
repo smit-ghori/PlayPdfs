@@ -10,7 +10,7 @@ if __name__ == "__main__":
     app.run(host="0.0.0.0", port=port)
 
 # making directory for saving uploaded files 
-UPLOAD_FILES = "uploads"
+UPLOAD_FILES = "/tmp/uploads"
 if not os.path.exists(UPLOAD_FILES):
     os.makedirs(UPLOAD_FILES, exist_ok=True)
 
