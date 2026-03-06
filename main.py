@@ -5,9 +5,7 @@ from pypdf import PdfWriter
 
 app = Flask(__name__)
 
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
+
 
 # making directory for saving uploaded files 
 UPLOAD_FILES = "/tmp/uploads"
@@ -69,4 +67,7 @@ def merge():
 @app.route('/download/<folder_id>')
 def download(folder_id):
     return render_template("download.html")
-app.run(debug=True)
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
