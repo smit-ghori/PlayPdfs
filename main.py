@@ -39,6 +39,10 @@ def hello():
 def home():
     return render_template("home.html")
 
+@app.route('/compress')
+def home():
+    return render_template("compress.html")
+
 
 # Merge PDF
 @app.route('/merge', methods=['GET', 'POST'])
