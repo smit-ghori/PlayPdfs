@@ -1,9 +1,8 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% block title %} Download {% endblock %} {% block
+main_content %}
+<h1>Your PDF is ready</h1>
 
-{% block title %}
-    Download
-{% endblock %}
-
-{% block main_content %}
-    <h1>Download page</h1>
+<a href="{{ url_for('getfile', folder_id=folder_id) }}">
+  Download Merged PDF
+</a>
 {% endblock %}
