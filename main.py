@@ -40,7 +40,7 @@ def home():
     return render_template("home.html")
 
 @app.route('/compress')
-def home():
+def compress():
     return render_template("compress.html")
 
 
